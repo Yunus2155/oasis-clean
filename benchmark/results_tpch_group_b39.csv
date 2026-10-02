@@ -1,2 +1,0 @@
-dataset,file,rows,ratio_vs_int32,engine,threads,seconds,rows_per_sec,outliers
-tpch,tpch_sf17_discount,101987778,7.93,cpu,32,1.700,59992811,0

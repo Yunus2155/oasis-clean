@@ -1,9 +1,0 @@
-dataset,file,rows,ratio_vs_int32,engine,threads,seconds,rows_per_sec,outliers
-taxi,taxi_distance,41168696,2.52,cpu,32,0.656,62757159,1322935
-taxi,taxi_distance,41168696,2.52,fpga,2,0.044,935652182,1322935
-taxi,taxi_fare,41169720,3.54,cpu,32,0.683,60277775,634104
-taxi,taxi_fare,41169720,3.54,fpga,2,0.043,957435349,634104
-taxi,taxi_tip,41169720,4.92,cpu,32,0.668,61631317,942157
-taxi,taxi_tip,41169720,4.92,fpga,2,0.041,1004139512,942157
-taxi,taxi_passengers,37078488,14.21,cpu,32,0.612,60585765,1077238
-taxi,taxi_passengers,37078488,14.21,fpga,2,0.035,1059385371,1077238

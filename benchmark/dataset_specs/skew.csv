@@ -1,7 +1,0 @@
-a,file,rows,bytes,bytes_per_row,encodings,groups,min_group,min_group_mod8,coltype,distinct,skewness,kurtosis,sum_square,planted,expected_flags
-0,/home/yukoek/bench/microbench/skew/skew_a0.parquet,20000000,80018675,4.00,PLAIN,163,93440,0,INT32,40000,-0.0000,-1.2000,3767287251620000000,20000,20000
-2,/home/yukoek/bench/microbench/skew/skew_a2.parquet,20000000,80018675,4.00,PLAIN,163,93440,0,INT32,40000,0.6569,-0.7232,2361323021357814000,20000,20000
-4,/home/yukoek/bench/microbench/skew/skew_a4.parquet,20000000,80018675,4.00,PLAIN,163,93440,0,INT32,40000,1.2350,0.4913,1571969564945186000,20000,20000
-6,/home/yukoek/bench/microbench/skew/skew_a6.parquet,20000000,80018675,4.00,PLAIN,163,93440,0,INT32,40000,1.7181,2.0849,1170095300669533000,20000,20000
-8,/home/yukoek/bench/microbench/skew/skew_a8.parquet,20000000,80018675,4.00,PLAIN,163,93440,0,INT32,40000,2.1253,3.8412,949400176014258000,20000,165854
-12,/home/yukoek/bench/microbench/skew/skew_a12.parquet,20000000,80018675,4.00,PLAIN,163,93440,0,INT32,40000,2.7906,7.5270,723069652909844000,20000,332687
