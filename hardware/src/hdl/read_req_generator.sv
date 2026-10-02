@@ -3,7 +3,6 @@
 import lynxTypes::OPCODE_BITS;
 import lynxTypes::LOCAL_READ;
 import lynxTypes::STRM_HOST;
-import lynxTypes::STRM_CARD;
 import lynxTypes::STRM_RDMA;
 import lynxTypes::N_OUTSTANDING;
 import oasis::read_req_t;
@@ -16,7 +15,6 @@ import oasis::read_req_t;
 module ReadReqGenerator #(
     parameter [OPCODE_BITS-1:0] OPCODE, // LOCAL_READ or RDMA_READ
     parameter                   DEST,
-    parameter                   USE_CARD = 0, // 1 => read from card (HBM) memory instead of host DRAM
     parameter                   FIFO_DEPTH = N_OUTSTANDING
 ) (
     input logic clk,
@@ -29,9 +27,7 @@ module ReadReqGenerator #(
 );
 
 localparam IS_LOCAL = (OPCODE == LOCAL_READ);
-// strm selects where the DMA reads from: STRM_CARD = on-card HBM, STRM_HOST = host DRAM (over PCIe),
-// STRM_RDMA = remote. A local read can target either host DRAM or card HBM with the same opcode.
-localparam STRM     = USE_CARD ? STRM_CARD : (IS_LOCAL ? STRM_HOST : STRM_RDMA);
+localparam STRM     = IS_LOCAL ? STRM_HOST : STRM_RDMA;
 localparam MODE     = IS_LOCAL ? 1'b0 : 1'b1;
 localparam RDMA     = IS_LOCAL ? 1'b0 : 1'b1;
 localparam REMOTE   = IS_LOCAL ? 1'b0 : 1'b1;

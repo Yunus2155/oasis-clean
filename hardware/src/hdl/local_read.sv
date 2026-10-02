@@ -13,8 +13,7 @@ import oasis::read_req_t;
  */
 module LocalRead #(
     parameter AXI_STRM_ID = 0,
-    parameter DATABEAT_SIZE = AXI_DATA_BITS / 8,
-    parameter USE_CARD = 0    // 1 => read from card (HBM) memory; data then arrives on axis_card_recv
+    parameter DATABEAT_SIZE = AXI_DATA_BITS / 8
 ) (
     input logic clk,
     input logic rst_n,
@@ -23,7 +22,7 @@ module LocalRead #(
     metaIntf.m sq_rd,     // #(.STYPE(req_t))
 
     AXI4S.s in,   // #(AXI_DATA_BITS)
-                  // NOTE: host read => axis_host_recv[AXI_STRM_ID]; card read => axis_card_recv[...]
+                  // NOTE: This must be axis_host_recv[AXI_STRM_ID]
     ndata_i.m out // #(data8_t, DATABEAT_SIZE)
 );
 
@@ -31,8 +30,7 @@ ready_valid_i #(read_req_t) req (clk, rst_n);
 
 ReadReqGenerator #(
     .OPCODE(LOCAL_READ),
-    .DEST(AXI_STRM_ID),
-    .USE_CARD(USE_CARD)
+    .DEST(AXI_STRM_ID)
 ) inst_req_gen (
     .clk(clk),
     .rst_n(rst_n),

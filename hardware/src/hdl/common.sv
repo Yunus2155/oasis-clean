@@ -56,16 +56,4 @@ parameter int ZSCORE_MODE_LEGACY   = 0; // per-stream 2-pass: each row group nor
 parameter int ZSCORE_MODE_STATS    = 1; // pass 1 only; emit one beat of (count, sum, sum_square)
 parameter int ZSCORE_MODE_CLASSIFY = 2; // skip pass 1; classify against the host-supplied totals
 
-// -- CardBufferConfig: the host-supplied HBM scratch buffer for the decode-once replay -------------
-// The buffer the decoded column is cached in during pass 1 and replayed from during pass 2. The
-// vaddr CANNOT be invented in RTL: Coyote has no card address space (CoyoteAllocType has no CARD
-// option). A STRM_CARD descriptor carries a HOST USER VIRTUAL ADDRESS whose pages the driver
-// shadows into HBM via the TLB -- `strm` picks which copy of that vaddr the DMA hits, not a
-// different address space. An unmapped vaddr makes the vFPGA page-fault into the driver.
-// Write layout: one buffer_t register per lane, packed exactly like MemConfig's
-// (vaddr << BUFFER_SIZE_BITS | capacity_in_transfers). Read: [0] = CONFIG_ID, [1] = NUM_LANES.
-parameter longint unsigned CARD_BUFFER_CONFIG_ID   = 64'h3e8b71c4d20a5f19;
-parameter int              NUM_CARD_BUFFER_CONFIG_REGS = 1;
-parameter longint unsigned CARD_BUFFER_INFO_REGS   = 2;
-
 endpackage
