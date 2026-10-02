@@ -1,0 +1,4 @@
+count_star()
+0
+beats,stalled_cycles,window_cycles,bytes,seconds,throughput_gbps,stalled_pct
+31871185,0,0,2039755840,0.0,0.0,0.0

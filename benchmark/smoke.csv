@@ -1,0 +1,13 @@
+dataset,file,rows,ratio_vs_int32,engine,threads,seconds,rows_per_sec,outliers
+tpch,tpch_sf17_discount,101987778,7.93,cpu,1,3.012,33860484,0
+tpch,tpch_sf17_discount,101987778,7.93,cpu,32,0.190,536777779,0
+tpch,tpch_sf17_discount,101987778,7.93,fpga,6,0.035,2913936514,0
+tpch,tpch_sf17_quantity,101987778,5.29,cpu,1,2.906,35095588,0
+tpch,tpch_sf17_quantity,101987778,5.29,cpu,32,0.195,523014246,0
+tpch,tpch_sf17_quantity,101987778,5.29,fpga,6,0.035,2913936514,0
+tpch,tpch_sf17_shipdate,101987778,2.52,cpu,1,3.036,33592812,0
+tpch,tpch_sf17_shipdate,101987778,2.52,cpu,32,0.202,504889990,0
+tpch,tpch_sf17_shipdate,101987778,2.52,fpga,6,0.039,2615071231,0
+tpch,tpch_sf17_extprice,101987778,1.0,cpu,1,2.770,36818692,0
+tpch,tpch_sf17_extprice,101987778,1.0,cpu,32,0.175,582787303,0
+tpch,tpch_sf17_extprice,101987778,1.0,fpga,6,0.074,1378213216,0

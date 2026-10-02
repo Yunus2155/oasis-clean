@@ -1,0 +1,7 @@
+dataset,rows,column,scale,distinct,fpga_e2e_s,cpp_e2e_s,sql_e2e_s,fpga_over_cpp,cpp_over_sql,fpga_over_sql,fpga_cpu_seconds,cpp_cpu_seconds,sql_cpu_seconds,min_group_mod8,encodings,path_used,fpga_op_ms,fpga_decode_ms,fpga_passes_ms,expected,flags_ok
+taxi_d1,2964624,fare_cents,100,8771,0.008,,0.017,,,2.125,0.020432,,0.190936,0,PLAIN+PLAIN_DICTIONARY,stream,5.55,2.45,2.86,35970,1
+taxi_d2,5972150,fare_cents,100,10395,0.01,,0.02,,,2.0,0.035104,,0.329542,6,PLAIN_DICTIONARY,stream,7.2,3.26,3.73,70362,1
+taxi_d3,13069067,fare_cents,100,12473,0.014,,0.032,,,2.2857142857142856,0.06561800000000001,,0.667542,1,PLAIN_DICTIONARY,stream,11.26,5.36,6.03,162865,1
+taxi_d4,20332093,fare_cents,100,14162,0.018,,0.044,,,2.4444444444444446,0.088129,,0.962472,1,PLAIN_DICTIONARY,stream,14.92,7.59,7.54,3985,1
+tpch_qty_sf17,101987778,x,1,51,0.058,,0.178,,,3.068965517241379,0.355638,,4.556633000000001,2,PLAIN_DICTIONARY,stream,53.86,22.54,30.89,0,1
+tpch_extprice_sf17,101987778,x,1,97500,0.099,,0.167,,,1.6868686868686869,0.49887099999999995,,4.358454,2,PLAIN,stream,93.59,55.54,38.1,0,1

@@ -1,0 +1,32 @@
+file                      threads     mode   runs   shorts  runs_short       fp     miss  bad_runs
+----------------------------------------------------------------------------------------------------
+tpch_sf17_extprice              2    clamp     10        2           2        0        0         0
+tpch_sf17_extprice              2   ignore     10        0           0        0        0         0
+tpch_sf17_extprice              4    clamp     10        0           0        0        0         0
+tpch_sf17_extprice              4   ignore     10        0           0        0        0         0
+tpch_sf17_extprice              8    clamp     10        0           0        0        0         0
+tpch_sf17_extprice              8   ignore     10        0           0        0        0         0
+tpch_sf17_extprice             12    clamp     10        1           1        0        0         0
+tpch_sf17_extprice             12   ignore     10        0           0        0        0         0
+taxi_distance                   2    clamp     10        0           0        0        0         0
+taxi_distance                   2   ignore     10        0           0        0        0         0
+taxi_distance                   4    clamp     10        0           0        0        0         0
+taxi_distance                   4   ignore     10        0           0        0        0         0
+taxi_distance                   8    clamp     10        0           0        0        0         0
+taxi_distance                   8   ignore     10        0           0        0        0         0
+taxi_distance                  12    clamp     10        0           0        0        0         0
+taxi_distance                  12   ignore     10        0           0        0        0         0
+taxi_fare                       2    clamp     10        0           0        0        0         0
+taxi_fare                       2   ignore     10        0           0        0        0         0
+taxi_fare                       4    clamp     10        0           0        0        0         0
+taxi_fare                       4   ignore     10        0           0        0        0         0
+taxi_fare                       8    clamp     10        0           0        0        0         0
+taxi_fare                       8   ignore     10        0           0        0        0         0
+taxi_fare                      12    clamp     10        0           0        0        0         0
+taxi_fare                      12   ignore     10        0           0        0        0         0
+
+Read it like this:
+  shorts=0 everywhere for a file/thread  -> that configuration does not trigger the bug
+  mode=ignore, shorts>0, fp=miss=0       -> flags were written; only the reported length is wrong
+  mode=ignore, shorts>0, miss>0          -> beats really are missing from memory (RTL problem)
+  mode=clamp vs ignore at the same point -> what the clamp costs in correctness

@@ -1,0 +1,18 @@
+binary:  /home/yukoek/duckdb-bench41
+zthreads: 12   protocol: 7 runs, mean of last 3
+
+>>> taxi_d1  (2,964,624 rows, PLAIN+PLAIN_DICTIONARY)
+    taxi_d1                fpga      8.0 ms   sql     17.0 ms    2.12x   flags ok
+>>> taxi_d2  (5,972,150 rows, PLAIN_DICTIONARY)
+    taxi_d2                fpga     10.0 ms   sql     20.0 ms    2.00x   flags ok
+>>> taxi_d3  (13,069,067 rows, PLAIN_DICTIONARY)
+    taxi_d3                fpga     14.0 ms   sql     32.0 ms    2.29x   flags ok
+>>> taxi_d4  (20,332,093 rows, PLAIN_DICTIONARY)
+    taxi_d4                fpga     18.0 ms   sql     44.0 ms    2.44x   flags ok
+>>> tpch_qty_sf17  (101,987,778 rows, PLAIN_DICTIONARY)
+    tpch_qty_sf17          fpga     58.0 ms   sql    178.0 ms    3.07x   flags ok
+>>> tpch_extprice_sf17  (101,987,778 rows, PLAIN)
+    tpch_extprice_sf17     fpga     99.0 ms   sql    167.0 ms    1.69x   flags ok
+  geomean speedup over 6 datasets: 2.23x
+
+wrote real_datasets.csv

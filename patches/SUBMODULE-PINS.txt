@@ -1,0 +1,25 @@
+# Oasis submodule chain -- exact commits (captured 2026-08-15)
+#
+# A drift anywhere in this chain silently changes the hardware you build.
+# Verify against this file after every 'git submodule update --init --recursive'.
+
+oasis @ 3d5bc50d991654da354f56ded5aa9639c64c1b9c [global-zscore]
+
+ 7f95831e7bba8a26db1c1ef87fd10a111c6a3c5e celeris (heads/main)
+ 0a84273215a050c2d7e42bde975392d03347da31 celeris/coyote (v0.2.1-249-g0a842732)
+ 1197a9dfa172b34c50ad5ee0a418a53fdddff146 celeris/coyote/hw/services/network (remotes/origin/features/rdma-driver-6-g1197a9d)
+ 75f997bcfe4c733eb26b59a18d7b8d7450ae41a3 celeris/libstf (75f997b)
+ 0b49d628fa8dc6091f8ef78519a3033e563c62d1 celeris/libstf/coyote (v0.2.1-236-g0b49d628)
+ 1197a9dfa172b34c50ad5ee0a418a53fdddff146 celeris/libstf/coyote/hw/services/network (remotes/origin/features/rdma-driver-6-g1197a9d)
+ 15d3f23bdf1f2cfdb73517d8a462fc2029d9e5cd extension/duckdb (heads/main-218-g15d3f23bdf)
+ 344397bb848aac786d260daf396ad09fc6a1d21f extension/extension-ci-tools (remotes/origin/v1.5.2)
+ b3879a07fddb5505901cc3bbed4923ab5b4d1811 parcore (remotes/origin/HEAD)
+ 7afc162a27558eb2ff99f7f03419de7aa08ed46a parcore/libstf (remotes/origin/HEAD)
+ 590af082ab70faaba4dd258455d5677c866b63b5 parcore/libstf/coyote (v0.2.1-257-g590af082)
+ 1197a9dfa172b34c50ad5ee0a418a53fdddff146 parcore/libstf/coyote/hw/services/network (remotes/origin/features/rdma-driver-6-g1197a9d)
+ e7443fcaaaab7dd72e89ef221cb70f71ae6037f3 parcore/vhsnunzip (heads/master-4-ge7443fc)
+ 2c94e11145f0b7b184b831577c93e5a41c4c0346 parcore/vhsnunzip/tests/tools/snappy (1.2.1)
+ d572f4777349d43653b21d6c2fc63020ab326db2 parcore/vhsnunzip/tests/tools/snappy/third_party/benchmark (v1.7.1)
+ b796f7d44681514f58a683a3a71ff17c94edb0c1 parcore/vhsnunzip/tests/tools/snappy/third_party/googletest (release-1.8.0-3137-gb796f7d4)
+ 177710191765af31bb1ca3d50b3b90ba0561c646 parcore/vhsnunzip/tests/tools/snzip (v1.0.5)
+ a670216ec5ea7e9b22ec33581ed8b542d3e868bd parcore/vhsnunzip/tests/vhlib (a670216)

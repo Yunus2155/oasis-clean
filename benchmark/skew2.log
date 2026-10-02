@@ -1,0 +1,19 @@
+binary:  /home/yukoek/duckdb-bench41
+zthreads: 12   protocol: 7 runs, mean of last 3
+
+>>> a=0  skewness -0.0000  kurtosis -1.2000
+    a=0                    fpga     21.3 ms   cpu     42.3 ms    1.99x   p1    12.5  p2     8.8   flags ok
+>>> a=2  skewness 0.6569  kurtosis -0.7232
+    a=2                    fpga     21.6 ms   cpu     42.3 ms    1.96x   p1    12.7  p2     8.9   flags ok
+>>> a=4  skewness 1.2350  kurtosis 0.4913
+    a=4                    fpga     21.7 ms   cpu     41.7 ms    1.92x   p1    12.6  p2     9.1   flags ok
+>>> a=6  skewness 1.7181  kurtosis 2.0849
+    a=6                    fpga     21.7 ms   cpu     43.0 ms    1.99x   p1    12.7  p2     8.9   flags ok
+>>> a=8  skewness 2.1253  kurtosis 3.8412
+    a=8                    fpga     21.3 ms   cpu     46.3 ms    2.17x   p1    12.4  p2     8.9   flags ok
+>>> a=12  skewness 2.7906  kurtosis 7.5270
+    a=12                   fpga     22.0 ms   cpu     42.0 ms    1.91x   p1    12.7  p2     9.3   flags ok
+  FPGA operator spread across skewness: 3.1%
+  >>> RUN THIS AGAIN into a second CSV. If the same-point repeat difference is as large as this spread, there is no trend -- and that comparison IS the result.
+
+wrote skew_sweep_rep2.csv

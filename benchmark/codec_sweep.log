@@ -1,0 +1,25 @@
+binary:  /home/yukoek/duckdb-bench41
+zthreads: 12   protocol: 7 runs, mean of last 3
+
+>>> lo/plain/uncompressed
+    lo/plai/unco           fpga     21.9 ms   cpu     42.0 ms    1.92x   p1    12.9  p2     8.9   flags ok
+>>> lo/plain/snappy
+    lo/plai/snap           fpga     21.7 ms   cpu     44.7 ms    2.06x   p1    12.7  p2     9.0   flags ok
+>>> lo/dict/uncompressed
+    lo/dict/unco           fpga     15.8 ms   cpu     46.0 ms    2.90x   p1     8.4  p2     7.4   flags ok
+>>> lo/dict/snappy
+    lo/dict/snap           fpga     16.2 ms   cpu     43.7 ms    2.70x   p1     8.8  p2     7.4   flags ok
+>>> hi/plain/uncompressed
+    hi/plai/unco           fpga     21.8 ms   cpu     42.3 ms    1.94x   p1    12.8  p2     9.0   flags ok
+>>> hi/plain/snappy
+    hi/plai/snap           fpga     21.9 ms   cpu     43.3 ms    1.97x   p1    12.8  p2     9.1   flags ok
+>>> hi/dict/uncompressed
+    hi/dict/unco           fpga     28.8 ms   cpu     53.7 ms    1.86x   p1    16.7  p2    12.1   flags ok
+>>> hi/dict/snappy
+    hi/dict/snap           fpga     28.0 ms   cpu     52.7 ms    1.88x   p1    15.8  p2    12.2   flags ok
+  level hi: phase 1 spread 26.7%  phase 2 spread 30.3%  (both phases decode, so both move)
+  level lo: phase 1 spread 42.2%  phase 2 spread 20.0%  (both phases decode, so both move)
+  fpga_op_ms ~  10.34 +  2.77 * bytes_per_row    rms 0.48 ms
+  cpu_op_ms  ~  37.17 +  2.11 * bytes_per_row    rms 2.71 ms
+
+wrote codec_sweep.csv

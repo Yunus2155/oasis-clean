@@ -1,0 +1,22 @@
+diff --git a/scripts/dyn/flow_dyn_ultrascale_plus.tcl.in b/scripts/dyn/flow_dyn_ultrascale_plus.tcl.in
+index 41096750..109134b2 100644
+--- a/scripts/dyn/flow_dyn_ultrascale_plus.tcl.in
++++ b/scripts/dyn/flow_dyn_ultrascale_plus.tcl.in
+@@ -103,7 +103,7 @@ if {$cfg(build_opt) eq 1} {
+ write_checkpoint -force "$dcp_dir/config_0/shell_opted_c0.dcp"
+ 
+ if {$cfg(build_opt) eq 1} {
+-    place_design -directive Auto_1
++    place_design -directive AltSpreadLogic_high
+ } else {
+     place_design
+ }
+@@ -182,7 +182,7 @@ for {set i 1}  {$i < $cfg(n_config)} {incr i} {
+     write_checkpoint -force "$dcp_dir/config_$i/shell_opted_c$i.dcp"
+ 
+     if {$cfg(build_opt) eq 1} {
+-        place_design -directive Auto_1
++        place_design -directive AltSpreadLogic_high
+     } else {
+         place_design
+     }
